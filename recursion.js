@@ -84,3 +84,38 @@
 //   if (n === 1) return arr[0];
 //   return Math.max(arr[n - 1], findMax(arr, n - 1));
 // }
+
+//? -------BINERY SEARCH-----
+function binarySearch(arr, target, left, right) {
+    if (left > right) {
+      return -1; // Target not found
+    }
+  
+    // Find the middle index
+    const mid = Math.floor((left + right) / 2);
+  
+    // Check if the target is at the middle
+    if (arr[mid] === target) {
+      return mid;
+    }
+  
+    // If target is smaller than mid, search the left half
+    if (arr[mid] > target) {
+      return binarySearch(arr, target, left, mid - 1);
+    }
+  
+    // If target is larger than mid, search the right half
+    return binarySearch(arr, target, mid + 1, right);
+  }
+  
+  // Example usage:
+  const arr = [1, 2, 3, 4, 5, 6, 7];
+  const target = 6;
+  const result = binarySearch(arr, target, 0, arr.length - 1);
+  
+  if (result !== -1) {
+    console.log(`Element found at index ${result}`);
+  } else {
+    console.log("Element not found");
+  }
+  
