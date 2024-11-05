@@ -18,12 +18,8 @@
 //? toArray()
 //? getSize()
 //? getMiddle()
-//  todo these three
 //? isPalindrome()
 //? removeDuplicates()
-//? sort()
-//? MergeTwoSortedLinkedLists()
-//? RemoveDuplicatesfromaSortedLinkedList()
 
 //! tail LL
 //? isEmtpy()
@@ -37,7 +33,5 @@
 //! double LL
 //? prepend()
 //? append()
-//? insetAt(index)
+//? insertAt(index)
 //? print()
-
-//! 

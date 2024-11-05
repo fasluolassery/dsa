@@ -269,8 +269,60 @@ class LinkedList{
     }
 
     getSize() { return console.log(this.size) }
-    
-    
+
+    isPalindrome() {
+        if (this.isEmpty() || !this.head.next) return true
+        
+        let slow = this.head
+        let fast = this.head
+
+        while (fast && fast.next) {
+            slow = slow.next
+            fast = fast.next.next
+        }
+
+        let prev = null
+        let curr = slow
+
+        while (curr) {
+            let next = curr.next
+            curr.next = prev
+            prev = curr
+            curr = next
+        }
+
+        let first = this.head
+        let second = prev
+
+        while (second) {
+            if (first.value !== second.value) return false
+            first = first.next
+            second = second.next
+        }
+
+        return true
+    }
+
+    removeDuplicates() {
+        let curr = this.head
+        while (curr) {
+            let runner = curr
+            while (runner.next) {
+                if (runner.next.value === curr.value) {
+                    runner.next = runner.next.next
+                } else {
+                    runner = runner.next
+                }
+            }
+            curr = curr.next
+        }
+    }
+
 }
 
 let list = new LinkedList()
+list.append(1)
+list.append(2)
+list.append(3)
+
+list.print()
