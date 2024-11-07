@@ -6,7 +6,9 @@
 //? intigersInRange()
 //? isEven()
 //? binarySearch()
-
-//todo 
-//? exponential()
+//? printEven()
 //? isPalidrome()
+
+//todo
+//? exponential()
+//? countVowels()

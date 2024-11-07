@@ -71,3 +71,45 @@
 // }
 // let arr = [1, 2, 3, 4, 5, 6]
 // console.log(binarySearch(arr, 6))
+
+//! isPalindrome
+// function isPalindrome(str, left = 0, right = str.length - 1) {
+//     // Base case: pointers cross or meet in the middle
+//     if (left >= right) {
+//         return true;
+//     }
+//     // Check if characters at current pointers are the same
+//     if (str[left] !== str[right]) {
+//         return false;
+//     }
+//     // Recursive call to check the next characters
+//     return isPalindrome(str, left + 1, right - 1);
+// }
+
+//! countVowels
+// function countVowels(str, index = 0) {
+//     // Base case: reach the end of the string
+//     if (index === str.length) {
+//         return 0;
+//     }
+//     // Check if the current character is a vowel
+//     const vowels = "aeiouAEIOU";
+//     let count = vowels.includes(str[index]) ? 1 : 0;
+//     // Recursive call, moving to the next character
+//     return count + countVowels(str, index + 1);
+// }
+
+
+//! printEven
+// function printEven(n) {
+//     // Base case: stop at 0 or a negative number
+//     if (n < 0) {
+//         return;
+//     }
+//     // Print if n is even
+//     if (n % 2 === 0) {
+//         console.log(n);
+//     }
+//     // Recursive call with n - 1
+//     printEven(n - 1);
+// }
